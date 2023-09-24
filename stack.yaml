@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   app:
-    image: indapublic/docker-swarm-expose-test:latest
+    image: indapublic/docker-swarm-expose-test-nextjs:latest
     ports:
       - 3000:3000
     deploy:
