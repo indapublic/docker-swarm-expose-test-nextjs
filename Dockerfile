@@ -26,8 +26,8 @@ COPY dummy.js /app
 
 USER nextjs
 
-# EXPOSE 3000
-EXPOSE 3001
+EXPOSE 3000
+# EXPOSE 3001
 
-# CMD ["node", "server.js"]
-CMD ["node", "dummy.js"]
+CMD ["node", "server.js"]
+# CMD ["node", "dummy.js"]
