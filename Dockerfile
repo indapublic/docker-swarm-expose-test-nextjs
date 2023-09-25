@@ -24,10 +24,10 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY dummy.js /app
 
-USER nextjs
+# USER nextjs
 
 EXPOSE 3000
-# EXPOSE 3001
+EXPOSE 3001
 
-CMD ["node", "server.js"]
-# CMD ["node", "dummy.js"]
+# CMD ["node", "server.js"]
+CMD ["node", "dummy.js"]
