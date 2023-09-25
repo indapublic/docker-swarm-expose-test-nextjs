@@ -5,6 +5,7 @@ services:
     image: indapublic/docker-swarm-expose-test-nextjs:test
     ports:
       - 3000:3000
+      - 3001:3001
     deploy:
       mode: replicated
       replicas: 1
