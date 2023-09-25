@@ -22,9 +22,12 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY dummy.js /app
 
 USER nextjs
 
-EXPOSE 3000
+# EXPOSE 3000
+EXPOSE 3001
 
-CMD ["node", "server.js"]
+# CMD ["node", "server.js"]
+CMD ["node", "dummy.js"]
